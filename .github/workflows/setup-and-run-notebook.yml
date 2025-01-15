@@ -32,6 +32,7 @@ jobs:
       - name: Convert notebooks to HTML
         run: |
             chmod +x notebook-to-html.sh
+            ./notebook-to-html.sh
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
