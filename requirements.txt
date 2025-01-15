@@ -1,0 +1,7 @@
+fastparquet~=2024.11.0 
+pyarrow~=18.1.0
+matplotlib~=3.8.0
+matplotlib-inline~=0.1.6
+numpy~=1.25.2
+pandas~=2.1.1
+seaborn~=0.13.0
