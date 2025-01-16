@@ -2,7 +2,7 @@
 
 mkdir -p _site
 for notebook in $(find . -name "*.ipynb" ! -path "./.ipynb_checkpoints/*"); do
-jupyter nbconvert --to html "$notebook" --output-dir _site/
+jupyter nbconvert --to html --execute "$notebook" --output-dir _site/
 done
 # Create an index page
 echo "<html><body><h1>Jupyter Notebooks</h1><ul>" > _site/index.html

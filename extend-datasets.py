@@ -103,10 +103,6 @@ if __name__ == "__main__":
     print("\nNumber of championships by nationality:")
     print(constructor_champions["nationality"].value_counts().head())
 
-    # TODO: Think how to really check consecutive wins
-    consecutive_wins = constructor_champions["name"].value_counts().max()
-    print(f"\nLongest streak of consecutive championships: {consecutive_wins}")
-
     most_recent = constructor_champions.iloc[-1]
     print(
         f"\nMost recent constructor champion ({most_recent['year']}): {most_recent['name']}"
