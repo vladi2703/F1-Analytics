@@ -76,36 +76,11 @@ if __name__ == "__main__":
         drivers, races, driver_standings
     )
 
-    print("\nF1 Championship Winners Dataset:")
-    print("=" * 50)
-    print(championship_winners.head())
-
-    print("\nTotal number of championships:", len(championship_winners))
-    print("\nNumber of championships by driver:")
-    print(championship_winners["driver_name"].value_counts().head())
-    print("\nNumber of championships by nationality:")
-    print(championship_winners["nationality"].value_counts().head())
-
     constructors = pd.read_csv("data/constructors.csv")
     constructor_standings = pd.read_csv("data/constructor_standings.csv")
 
     constructor_champions = create_constructor_champions_dataset(
         constructors, constructor_standings, races
-    )
-
-    print("\nF1 Constructor Championship Winners Dataset:")
-    print("=" * 50)
-    print(constructor_champions.head())
-
-    print("\nTotal number of championships:", len(constructor_champions))
-    print("\nNumber of championships by constructor:")
-    print(constructor_champions["name"].value_counts().head())
-    print("\nNumber of championships by nationality:")
-    print(constructor_champions["nationality"].value_counts().head())
-
-    most_recent = constructor_champions.iloc[-1]
-    print(
-        f"\nMost recent constructor champion ({most_recent['year']}): {most_recent['name']}"
     )
 
     championship_winners.to_parquet("data/championship_winners.parquet", index=False)
