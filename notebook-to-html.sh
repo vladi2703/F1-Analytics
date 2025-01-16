@@ -1,14 +1,14 @@
 #!/bin/bash
 
 mkdir -p _site
+
+mkdir -p _site/assets/images
+cp assets/images/* _site/assets/images/
+
+cp assets/templates/index.html _site/
+
 for notebook in $(find . -name "*.ipynb" ! -path "./.ipynb_checkpoints/*"); do
-jupyter nbconvert --to html --execute "$notebook" --output-dir _site/
+    jupyter nbconvert --to html --execute "$notebook" --output-dir _site/
 done
-# Create an index page
-echo "<html><body><h1>Jupyter Notebooks</h1><ul>" > _site/index.html
-for file in _site/*.html; do
-if [ "$(basename "$file")" != "index.html" ]; then
-    echo "<li><a href=\"$(basename "$file")\">${file%.*}</a></li>" >> _site/index.html
-fi
-done
-echo "</ul></body></html>" >> _site/index.html
+
+echo "Site generation complete. Check _site directory for the results."

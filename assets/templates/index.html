@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Analytics Data Pipeline Project</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">F1 Analytics</h1>
+            <p class="text-xl text-gray-600"> A Data Pipeline project</p>
+        </header>
+
+        <!-- Team Members Section -->
+        <div class="flex justify-center gap-12 mb-12">
+            <!-- Team Member 1 -->
+            <div class="text-center">
+                <div class="w-40 h-40 rounded-full overflow-hidden mx-auto mb-4 border-4 border-red-500 shadow-lg">
+                    <img src="assets/images/Elina.jpeg" alt="Elina Yancheva" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800">Elina Yancheva</h3>
+                <p class="text-gray-600">Big Data Technologies</p>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="text-center">
+                <div class="w-40 h-40 rounded-full overflow-hidden mx-auto mb-4 border-4 border-red-500 shadow-lg">
+                    <img src="assets/images/Vladimir.jpg" alt="Vladimir Stoyanov" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800">Vladimir Stoyanov</h3>
+                <p class="text-gray-600">Big Data Technologies</p>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-center gap-6 mb-12">
+            <a href="analytics.html" class="transform transition-transform hover:scale-105">
+                <button
+                    class="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:bg-red-700 transition-colors">
+                    Go to Project
+                </button>
+            </a>
+            <a href="slides.html" class="transform transition-transform hover:scale-105">
+                <button
+                    class="bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:bg-gray-900 transition-colors">
+                    View Slides
+                </button>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 text-gray-600">
+            <p>© 2025 F1 Analytics Project</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add smooth scrolling for better navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
