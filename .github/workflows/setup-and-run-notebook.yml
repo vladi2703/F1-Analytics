@@ -5,6 +5,7 @@ on:
       - master 
     paths:
       - '**.ipynb'  # Trigger only when notebook files change
+      - 'data/**'   # Trigger only when data files change
 
 jobs:
   convert-and-publish:
