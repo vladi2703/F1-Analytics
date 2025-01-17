@@ -1,6 +1,5 @@
 import subprocess
 import sys
-import os
 import webbrowser
 import shutil
 from pathlib import Path
