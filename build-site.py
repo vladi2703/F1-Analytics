@@ -35,6 +35,22 @@ def run_jupyter_command(notebook_path, output_dir):
                 str(output_dir),
             ]
         )
+        subprocess.check_call(
+            [
+                sys.executable,
+                "-m",
+                "jupyter",
+                "nbconvert",
+                "--to",
+                "slides",
+                "--execute",
+                str(notebook_path),
+                "--output-dir",
+                str(output_dir),
+                "--SlidesExporter.reveal_scroll=True",
+            ]
+        )
+
     except subprocess.CalledProcessError as e:
         print(f"Error converting notebook {notebook_path}: {e}")
         sys.exit(1)
